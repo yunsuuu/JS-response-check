@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응속도체크</title>
+  <style>
+    #screen {
+      width: 300px;
+      height: 200px;
+      padding: 20px;
+      text-align: center;
+      user-select: none;
+    }
+    #screen.waiting {
+      background-color: lightblue;
+    }
+    #screen.ready {
+      background-color: lightpink;
+    }
+    #screen.now {
+      background-color: lightgreen;
+    }
+    </style>
+</head>
+<body>
+  <h3>반응속도 체크</h3>
+  <div id="screen" class="waiting">클릭해서 시작하세요!</div>
+  <div id="result"></div>
+  <script src="app.js"></script>
+</body>
+</html>
