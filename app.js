@@ -37,6 +37,10 @@ const changeColor = (e) => {
     // 평균 구하는 코드(암기)
     const average = Math.floor(records.reduce((a, c) => a + c) / records.length);
     $result.innerText = `현재 : ${current}ms / 평균 : ${average}ms`;
+    const topFive = records.sort((a, b) => a - b).slice(0, 5);
+    topFive.forEach((top, index) => {
+      $result.append(document.createElement("br"), document.createElement("hr"), `${index + 1}위 : ${top}ms`);
+    })
     // 값 초기화(필수코드는 아니지만 혹시 모를 버그를 예방하기 위해)
     startTime = null;
     endTime = null;
